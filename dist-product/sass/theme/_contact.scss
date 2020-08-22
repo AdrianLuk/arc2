@@ -1,0 +1,15 @@
+.contactpage {
+    &-description {
+    }
+    &-contactlinks {
+        a{
+            &:hover{
+                text-decoration: none;
+            }
+        .fa {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    }
+}

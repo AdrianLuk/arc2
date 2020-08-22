@@ -1,0 +1,11 @@
+.class {
+    &-right-description {
+        text-align: justify;
+    }
+    .cta {
+        @media screen and (min-width: $desktop) {
+            max-width: 25%;
+            margin: auto;
+        }
+    }
+}

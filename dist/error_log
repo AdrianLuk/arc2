@@ -1,0 +1,28 @@
+[03-May-2019 17:22:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/arced782/public_html/wp-content/themes/arc/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/arced782/public_html/wp-content/themes/arc/index.php on line 14
+[12-Aug-2019 15:04:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/arced782/public_html/wp-content/themes/arc/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/arced782/public_html/wp-content/themes/arc/index.php on line 14
+[16-Nov-2019 10:43:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/arced782/public_html/wp-content/themes/arc/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/arced782/public_html/wp-content/themes/arc/404.php on line 8
+[18-Nov-2019 06:26:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/arced782/public_html/wp-content/themes/arc/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/arced782/public_html/wp-content/themes/arc/404.php on line 8
+[12-Jan-2020 00:31:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/arced782/public_html/wp-content/themes/arc/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/arced782/public_html/wp-content/themes/arc/404.php on line 8
+[17-Apr-2020 11:47:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/arced782/public_html/wp-content/themes/arc/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/arced782/public_html/wp-content/themes/arc/404.php on line 8
+[25-Apr-2020 07:00:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/arced782/public_html/wp-content/themes/arc/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/arced782/public_html/wp-content/themes/arc/404.php on line 8

@@ -1,0 +1,55 @@
+.hero-section {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        height: 400px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 600px;
+    }
+    .container {
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        @include text-shadow;
+
+        h1 {
+            @include title;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+
+            @media screen and (min-width: 768px) {
+                font-size: 3rem;
+            }
+        }
+
+        h2 {
+            @include title;
+            margin-bottom: 2rem;
+        }
+        .hero-cta {
+            color: $white;
+        }
+    }
+}
+
+.home-hero-section {
+    height: 600px;
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 800px;
+    }
+}
