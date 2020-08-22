@@ -1,0 +1,48 @@
+.footer-cta {
+    @include background-image-parallax;
+    min-height: 300px;
+    text-align: center;
+    color: $white;
+    position: relative;
+    .overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    &-content {
+        @include center-block;
+        @include text-shadow;
+        z-index: 3;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &-heading,
+    &-subheading {
+        font-weight: bold;
+        padding-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+    &-heading {
+        font-size: 1.5rem;
+    }
+    &-subheading {
+        font-size: 1.25rem;
+    }
+}
+
+#wrapper-footer {
+    background: $dark-grey;
+    color: $white;
+    a {
+        color: $white;
+        text-decoration: none;
+        margin: 0 1rem;
+    }
+    .site-info {
+        text-align: center;
+        .adrian {
+            margin: 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
