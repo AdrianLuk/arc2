@@ -18,12 +18,11 @@ jQuery().ready(function ($) {
     });
   });
   var token =
-      'IGQVJVS0J4Y3owZAG43OVFMQmkzZAi01ZAEpnYkp3d2wzTGFNTFl3ZA1pqZAVVLU2VaY0dHTmdjWnloZAW92Q3ItTlJTSllicEJsU1lCR0UtOVVUaVZALaE5vZAXNBUlY4dFd5QkRTdGI5dkM0SW5SaWI1QTZAFWAZDZD', // learn how to obtain it below
+      'IGQVJWWUlHN1BxTnRIdEFDa0FYWFBwSFdfMGc4NXdFR2dkWWoyZA0JoYXZAFMnlTMVlDcEJEblRENlRxV2puR190VjFNdXotaFZAMeEpDWVBraDZAVbVhLQllLc3RLY3JYM3NiNjd4aVE0QVFJZA2xydGZAxRQZDZD', // learn how to obtain it below
     //userid = 3687936629, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
     num_photos = 8; // how much photos do you want to get
   $.ajax({
-    url:
-      'https://graph.instagram.com/me/media?fields=id,username,media_url,thumbnail_url,permalink',
+    url: 'https://graph.instagram.com/me/media?fields=id,username,media_url,thumbnail_url,permalink',
     dataType: 'jsonp',
     data: { access_token: token, limit: num_photos },
     type: 'GET',
