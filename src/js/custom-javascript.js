@@ -18,7 +18,7 @@ jQuery().ready(function ($) {
     });
   });
   var token =
-      'IGQVJWWUlHN1BxTnRIdEFDa0FYWFBwSFdfMGc4NXdFR2dkWWoyZA0JoYXZAFMnlTMVlDcEJEblRENlRxV2puR190VjFNdXotaFZAMeEpDWVBraDZAVbVhLQllLc3RLY3JYM3NiNjd4aVE0QVFJZA2xydGZAxRQZDZD', // learn how to obtain it below
+      'IGQVJVU3gwdVFqQk5kTmtUTkdPbFRvRTdyV2ZA4YzZAMTEhBMjRSalowLTliOEJYS1hzYkd3NFFJbjZAsRGdTcU9DdGlSaW0waXhMb3RPR3VkcTFoLUktUVoycFpXd0lrczBHWW95WmpJUjBVWE1xbVNvUQZDZD', // learn how to obtain it below
     //userid = 3687936629, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
     num_photos = 8; // how much photos do you want to get
   $.ajax({
@@ -29,11 +29,14 @@ jQuery().ready(function ($) {
     success: function (data) {
       console.log(data);
       for (x in data.data) {
+        var imgUrl = data.data[x].thumbnail_url
+          ? data.data[x].thumbnail_url
+          : data.data[x].media_url;
         $('#instagram-feed ul.instagram-photos').append(
           '<li class="instagram-item"><a class="instagram-link" href="' +
             data.data[x].permalink +
             '" target="_blank"><div class="instagram-photo-container"><div class="overlay"></div><img class="img-fluid instagram-photo px-0" src="' +
-            data.data[x].media_url +
+            imgUrl +
             '" alt="picture"></div><div class="instagram-view"><div class="fa fa-instagram"></div><p>View on Instagram</p></div></a></li>'
         );
       }
