@@ -6871,23 +6871,25 @@ jQuery().ready(function ($) {
     });
   });
   var token =
-      'IGQVJVS0J4Y3owZAG43OVFMQmkzZAi01ZAEpnYkp3d2wzTGFNTFl3ZA1pqZAVVLU2VaY0dHTmdjWnloZAW92Q3ItTlJTSllicEJsU1lCR0UtOVVUaVZALaE5vZAXNBUlY4dFd5QkRTdGI5dkM0SW5SaWI1QTZAFWAZDZD', // learn how to obtain it below
+      'IGQVJVb2Fpd05OMHhaWGUyQ29IclY2dERCU29vQUNPUnVSWVg2UTJRUHd2ZA0NJamNrZAVEyMmZARM09rUVZAiU1EwdnVjNGQ3RE5Ic0RwZATVxNWJaSndFN2tDZA0NYRXd6N2J0Wm13bVViWVBiRFlqNGxhUwZDZD', // learn how to obtain it below
     //userid = 3687936629, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
     num_photos = 8; // how much photos do you want to get
   $.ajax({
-    url:
-      'https://graph.instagram.com/me/media?fields=id,username,media_url,thumbnail_url,permalink',
+    url: 'https://graph.instagram.com/me/media?fields=id,username,media_url,thumbnail_url,permalink',
     dataType: 'jsonp',
     data: { access_token: token, limit: num_photos },
     type: 'GET',
     success: function (data) {
       console.log(data);
       for (x in data.data) {
+        var imgUrl = data.data[x].thumbnail_url
+          ? data.data[x].thumbnail_url
+          : data.data[x].media_url;
         $('#instagram-feed ul.instagram-photos').append(
           '<li class="instagram-item"><a class="instagram-link" href="' +
             data.data[x].permalink +
             '" target="_blank"><div class="instagram-photo-container"><div class="overlay"></div><img class="img-fluid instagram-photo px-0" src="' +
-            data.data[x].media_url +
+            imgUrl +
             '" alt="picture"></div><div class="instagram-view"><div class="fa fa-instagram"></div><p>View on Instagram</p></div></a></li>'
         );
       }
@@ -6972,8 +6974,7 @@ jQuery().ready(function ($) {
         rowDivs.push($el);
       } else {
         rowDivs.push($el);
-        currentTallest =
-          currentTallest < $el.height() ? $el.height() : currentTallest;
+        currentTallest = currentTallest < $el.height() ? $el.height() : currentTallest;
       }
       for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
         rowDivs[currentDiv].height(currentTallest);

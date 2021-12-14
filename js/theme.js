@@ -6871,7 +6871,7 @@ jQuery().ready(function ($) {
     });
   });
   var token =
-      'IGQVJVU3gwdVFqQk5kTmtUTkdPbFRvRTdyV2ZA4YzZAMTEhBMjRSalowLTliOEJYS1hzYkd3NFFJbjZAsRGdTcU9DdGlSaW0waXhMb3RPR3VkcTFoLUktUVoycFpXd0lrczBHWW95WmpJUjBVWE1xbVNvUQZDZD', // learn how to obtain it below
+      'IGQVJVb2Fpd05OMHhaWGUyQ29IclY2dERCU29vQUNPUnVSWVg2UTJRUHd2ZA0NJamNrZAVEyMmZARM09rUVZAiU1EwdnVjNGQ3RE5Ic0RwZATVxNWJaSndFN2tDZA0NYRXd6N2J0Wm13bVViWVBiRFlqNGxhUwZDZD', // learn how to obtain it below
     //userid = 3687936629, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
     num_photos = 8; // how much photos do you want to get
   $.ajax({
@@ -6974,8 +6974,7 @@ jQuery().ready(function ($) {
         rowDivs.push($el);
       } else {
         rowDivs.push($el);
-        currentTallest =
-          currentTallest < $el.height() ? $el.height() : currentTallest;
+        currentTallest = currentTallest < $el.height() ? $el.height() : currentTallest;
       }
       for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
         rowDivs[currentDiv].height(currentTallest);
